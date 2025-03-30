@@ -1,0 +1,7 @@
+# for facial_recognition
+torch
+opencv-python
+numpy
+facenet-pytorch
+torchvision
+Pillow
