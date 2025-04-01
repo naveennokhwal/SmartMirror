@@ -57,18 +57,6 @@ emotion_map = {0: 'Angry', 1: 'Disgust', 2: 'Fear', 3: 'Happy',
 
 # Initialize the model and face cascade detector
 class EmotionDetector:
-    # def __init__(self, model_path='final_emotion_model.pth'):
-    #     self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        
-    #     # Load model
-    #     self.model = EmotionCNN()
-    #     self.model.load_state_dict(torch.load(model_path, map_location=self.device))
-    #     self.model.to(self.device)
-    #     self.model.eval()
-        
-    #     # Load face cascade
-    #     self.face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
-
     def __init__(self, model_path=r'api\final_emotion_model.pth'):
         try:
             self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -144,7 +132,3 @@ class EmotionDetector:
             emotion_text = emotion_map[emotion_label]
             
         return emotion_text
-    
-
-# emotion_detector = EmotionDetector()
-# emotion_detector.detect_from_image(r"C:\Learning\Machine-Learning\Deep_Learning_WorkSpace\projects\SmartMirror_new\data\Naveen\WIN_20250331_22_16_04_Pro.jpg")
