@@ -1,7 +1,12 @@
-# for facial_recognition
+# for facial_recognition and emotion
 torch
 opencv-python
 numpy
 facenet-pytorch
 torchvision
 Pillow
+
+# for app.py
+flask==2.3.3
+flask-cors==4.0.0
+
